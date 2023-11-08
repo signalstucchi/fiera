@@ -10,6 +10,7 @@ WORKDIR /opt/app-root/src
 COPY package.json /opt/app-root/src
 RUN npm install --no-audit --no-update-notifier --no-fund --omit=dev node-red-dashboard node-red-contrib-simple-gate node-red-contrib-scx-ibmiotapp node-red-contrib-cloudantplus
 RUN npm update
+RUN npm audit fix --force
 COPY . .
 
 ## Release image
