@@ -9,6 +9,7 @@ RUN mkdir -p /opt/app-root/src
 WORKDIR /opt/app-root/src
 COPY package.json /opt/app-root/src
 RUN npm install --no-audit --no-update-notifier --no-fund --omit=dev node-red-dashboard node-red-contrib-simple-gate node-red-contrib-scx-ibmiotapp node-red-contrib-cloudantplus
+RUN npm update
 COPY . .
 
 ## Release image
