@@ -8,7 +8,7 @@ RUN npm install --global npm@8.15.0
 RUN mkdir -p /opt/app-root/src
 WORKDIR /opt/app-root/src
 COPY package.json /opt/app-root/src
-RUN npm install --no-audit --no-update-notifier --no-fund --omit=dev
+RUN npm install --no-audit --no-update-notifier --no-fund --omit=dev node-red-dashboard node-red-contrib-simple-gate node-red-contrib-scx-ibmiotapp node-red-contrib-cloudantplus
 COPY . .
 
 ## Release image
